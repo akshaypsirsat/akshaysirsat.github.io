@@ -12,21 +12,14 @@
 body {
   margin: 0;
   padding: 0;
-  cursor: none;
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #0f172a);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
 }
-.cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 32px;
-  height: 32px;
-  border: 2px solid #38bdf8;
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s ease-out, width 0.2s ease, height 0.2s ease;
-  z-index: 9999;
-  mix-blend-mode: difference;
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 .hover-effect:hover {
   background-color: #1e3a8a;
@@ -36,8 +29,7 @@ body {
 }
 </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans m-0 p-0">
-<div class="cursor" id="cursor"></div>
+<body class="text-gray-100 font-sans m-0 p-0">
 <section class="min-h-screen flex flex-col justify-center items-center text-center px-4">
 <h1 class="text-4xl sm:text-6xl font-bold mb-4">Akshay Sirsat</h1>
 <p class="text-xl sm:text-2xl text-gray-400">Cloud Engineer / DevOps / Automation Enthusiast</p>
@@ -79,12 +71,6 @@ body {
 document.addEventListener("DOMContentLoaded", () => {
   gsap.from("h1", { duration: 1.2, y: -40, opacity: 0, ease: "power2.out" });
   gsap.from("p", { duration: 1, delay: 0.2, opacity: 0, y: 20 });
-
-  const cursor = document.getElementById("cursor");
-  document.addEventListener("mousemove", (e) => {
-    cursor.style.top = e.clientY + "px";
-    cursor.style.left = e.clientX + "px";
-  });
 
   document.querySelectorAll('.tilt').forEach(el => {
     VanillaTilt.init(el, { max: 15, speed: 400, glare: true, "max-glare": 0.3 });
