@@ -1,81 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akshay Sirsat | Cloud Engineer</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Akshay Sirsat | Terminal Portfolio</title>
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.1" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
 <style>
 body {
+  background: #0f172a;
+  color: #00ff00;
+  font-family: monospace;
   margin: 0;
-  padding: 0;
-  background: linear-gradient(-45deg, #0f172a, #1e293b, #0f172a);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+  padding: 2rem;
 }
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+h1, h2, p, a {
+  color: #00ff00;
 }
-.hover-effect:hover {
-  background-color: #1e3a8a;
-  color: #fff;
-  transform: scale(1.03);
-  transition: all 0.3s ease;
+a:hover {
+  text-decoration: underline;
+}
+.terminal-box {
+  background: #000000;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px #00ff00;
 }
 </style>
 </head>
-<body class="text-gray-100 font-sans m-0 p-0">
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-4">
-<h1 class="text-4xl sm:text-6xl font-bold mb-4">Akshay Sirsat</h1>
-<p class="text-xl sm:text-2xl text-gray-400">Cloud Engineer / DevOps / Automation Enthusiast</p>
-<a href="#projects" class="mt-8 inline-block px-6 py-3 border border-blue-500 text-blue-500 rounded transition hover-effect">View Projects</a>
-</section>
-<section class="max-w-4xl mx-auto px-4 py-16">
-<h2 class="text-3xl font-bold text-blue-400 mb-6">About Me</h2>
-<p class="text-gray-300 text-lg leading-relaxed">I'm a Cloud Engineer with 5+ years of experience designing secure, scalable AWS infrastructures. I specialize in automation, IaC (Terraform), and Kubernetes-based deployments. Obsessed with system resilience, observability, and minimizing toil. I love chai, terminal art, and breaking things (then fixing them better).</p>
-</section>
-<section id="projects" class="bg-gray-800 py-16 px-4">
-<div class="max-w-5xl mx-auto">
-<h2 class="text-3xl font-bold text-blue-400 mb-10 text-center">Projects</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-<div class="bg-gray-700 rounded-lg p-6 shadow hover:shadow-xl transition tilt hover-effect">
-<h3 class="text-xl font-semibold text-white mb-2">Auto Scaling Infrastructure</h3>
-<p class="text-gray-300">Terraform scripts to create self-scaling AWS EC2 clusters with ALB and CloudWatch alarms.</p>
-</div>
-<div class="bg-gray-700 rounded-lg p-6 shadow hover:shadow-xl transition tilt hover-effect">
-<h3 class="text-xl font-semibold text-white mb-2">EKS Monitoring Stack</h3>
-<p class="text-gray-300">Prometheus + Grafana setup with custom dashboards and alerting for Kubernetes workloads.</p>
-</div>
-<div class="bg-gray-700 rounded-lg p-6 shadow hover:shadow-xl transition tilt hover-effect">
-<h3 class="text-xl font-semibold text-white mb-2">AWS Lambda NLP</h3>
-<p class="text-gray-300">Serverless text + image processing using Comprehend & Rekognition APIs.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="max-w-4xl mx-auto px-4 py-16">
-<h2 class="text-3xl font-bold text-blue-400 mb-6">Contact</h2>
-<div class="space-y-2">
-<p>📧 <a href="mailto:akshanc2@gmail.com" class="text-blue-400 hover:underline">akshanc2@gmail.com</a></p>
-<p>🌐 <a href="https://www.linkedin.com/in/akshay-s-5a1151209" target="_blank" class="text-blue-400 hover:underline">LinkedIn</a></p>
-<p>💻 <a href="https://github.com/akshaysirsat" target="_blank" class="text-blue-400 hover:underline">GitHub</a></p>
-</div>
-</section>
-<footer class="text-center py-6 text-gray-500 border-t border-gray-700">© 2025 Akshay Sirsat — Built with Tailwind + ❤️</footer>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.from("h1", { duration: 1.2, y: -40, opacity: 0, ease: "power2.out" });
-  gsap.from("p", { duration: 1, delay: 0.2, opacity: 0, y: 20 });
+<body>
+<div class="terminal-box">
+<h1>Akshay Sirsat@portfolio:~$</h1>
+<p>Cloud Engineer / DevOps / Automation Enthusiast</p>
 
-  document.querySelectorAll('.tilt').forEach(el => {
-    VanillaTilt.init(el, { max: 15, speed: 400, glare: true, "max-glare": 0.3 });
-  });
-});
-</script>
+<h2>About Me</h2>
+<p>Experienced in AWS, Kubernetes, Terraform. Obsessed with automating everything.</p>
+
+<h2>Projects</h2>
+<ul>
+<li>Auto Scaling Infrastructure - Terraform & AWS</li>
+<li>EKS Monitoring Stack - Prometheus + Grafana</li>
+<li>Serverless NLP - Lambda Functions</li>
+</ul>
+
+<h2>Contact</h2>
+<p>Email: <a href="mailto:akshanc2@gmail.com">akshanc2@gmail.com</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/akshay-s-5a1151209" target="_blank">Profile</a></p>
+<p>GitHub: <a href="https://github.com/akshaysirsat" target="_blank">akshaysirsat</a></p>
+</div>
 </body>
 </html>
