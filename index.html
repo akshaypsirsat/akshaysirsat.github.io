@@ -1,51 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Akshay Sirsat | Terminal Portfolio</title>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<style>
-body {
-  background: #0f172a;
-  color: #00ff00;
-  font-family: monospace;
-  margin: 0;
-  padding: 2rem;
-}
-h1, h2, p, a {
-  color: #00ff00;
-}
-a:hover {
-  text-decoration: underline;
-}
-.terminal-box {
-  background: #000000;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 20px #00ff00;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akshay Sirsat | Cloud Engineer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    body { background: #0f172a; color: #f1f5f9; }
+    .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+    .hero h1 { font-size: 3rem; font-weight: 700; }
+    .hero p { font-size: 1.2rem; color: #94a3b8; }
+    nav { position: fixed; top:0; left:0; width:100%; background: rgba(15,23,42,0.8); backdrop-filter: blur(8px); display:flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; z-index:10; }
+    nav a { color:#f1f5f9; margin-left:1rem; }
+    nav a:hover { color:#38bdf8; }
+    section { padding:4rem 1rem; max-width:900px; margin:auto; }
+  </style>
 </head>
 <body>
-<div class="terminal-box">
-<h1>Akshay Sirsat@portfolio:~$</h1>
-<p>Cloud Engineer / DevOps / Automation Enthusiast</p>
+  <nav>
+    <div class="font-bold">Akshay Sirsat</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-<h2>About Me</h2>
-<p>Experienced in AWS, Kubernetes, Terraform. Obsessed with automating everything.</p>
+  <section class="hero">
+    <h1>Cloud Engineer & DevOps Specialist</h1>
+    <p>Designing scalable infrastructure and automating everything.</p>
+  </section>
 
-<h2>Projects</h2>
-<ul>
-<li>Auto Scaling Infrastructure - Terraform & AWS</li>
-<li>EKS Monitoring Stack - Prometheus + Grafana</li>
-<li>Serverless NLP - Lambda Functions</li>
-</ul>
+  <section id="about">
+    <h2 class="text-2xl font-bold text-blue-400 mb-4">About Me</h2>
+    <p>I’m a Cloud Engineer with 5+ years experience in AWS, Kubernetes, and Terraform. I build secure, automated systems that scale smoothly.</p>
+  </section>
 
-<h2>Contact</h2>
-<p>Email: <a href="mailto:akshanc2@gmail.com">akshanc2@gmail.com</a></p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/akshay-s-5a1151209" target="_blank">Profile</a></p>
-<p>GitHub: <a href="https://github.com/akshaysirsat" target="_blank">akshaysirsat</a></p>
-</div>
+  <section id="projects">
+    <h2 class="text-2xl font-bold text-blue-400 mb-4">Projects</h2>
+    <ul class="space-y-4">
+      <li class="border border-gray-700 p-4 rounded hover:bg-gray-800 transition">
+        <h3 class="font-semibold">Auto Scaling Infrastructure</h3>
+        <p>Terraform scripts for EC2 clusters with ALB and CloudWatch.</p>
+      </li>
+      <li class="border border-gray-700 p-4 rounded hover:bg-gray-800 transition">
+        <h3 class="font-semibold">EKS Monitoring Stack</h3>
+        <p>Prometheus & Grafana observability setup.</p>
+      </li>
+      <li class="border border-gray-700 p-4 rounded hover:bg-gray-800 transition">
+        <h3 class="font-semibold">Serverless NLP</h3>
+        <p>Lambda functions for text and image processing.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2 class="text-2xl font-bold text-blue-400 mb-4">Contact</h2>
+    <p>Email: <a href="mailto:akshanc2@gmail.com" class="text-blue-400">akshanc2@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/akshay-s-5a1151209" class="text-blue-400">Profile</a></p>
+    <p>GitHub: <a href="https://github.com/akshaysirsat" class="text-blue-400">akshaysirsat</a></p>
+  </section>
+
+  <script>
+    gsap.from(".hero h1", {duration:1.2, y:-30, opacity:0});
+    gsap.from(".hero p", {duration:1, delay:0.2, y:20, opacity:0});
+  </script>
 </body>
 </html>
