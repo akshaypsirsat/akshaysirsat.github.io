@@ -1,135 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Akshay Sirsat - Cloud Engineer</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9fafb;
-      color: #1f2937;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #0f172a;
-      color: #f1f5f9;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    header p {
-      font-size: 1.2em;
-      color: #cbd5e1;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    h2 {
-      color: #1e40af;
-      margin-top: 40px;
-      margin-bottom: 20px;
-    }
-    .contact, .certifications {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .contact div, .certifications div {
-      background: #e2e8f0;
-      padding: 15px;
-      border-radius: 6px;
-      flex: 1 1 200px;
-      text-align: center;
-    }
-    .what-doing {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-    .activity {
-      background: #f1f5f9;
-      border: 1px solid #cbd5e1;
-      border-radius: 6px;
-      padding: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #64748b;
-      font-size: 0.9em;
-    }
-    a {
-      color: #1d4ed8;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Akshay Sirsat - Cloud Engineer Portfolio</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #f1f5f9;
+  }
+  header {
+    background-color: #1e293b;
+    color: #f1f5f9;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+  header p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #38bdf8;
+  }
+  .typing {
+    border-right: .1em solid #38bdf8;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+  h2 {
+    color: #38bdf8;
+  }
+  .about {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .about p {
+    display: none;
+    margin-top: 10px;
+  }
+  .skills, .contact, .certifications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .skills div, .contact div, .certifications div {
+    background: #1e293b;
+    padding: 10px 15px;
+    border: 1px solid #334155;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1 1 120px;
+  }
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .project {
+    border: 1px solid #334155;
+    border-radius: 6px;
+    padding: 15px;
+    background: #1e293b;
+    transition: transform 0.2s;
+  }
+  .project:hover {
+    transform: translateY(-5px);
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #94a3b8;
+  }
+  a {
+    color: #38bdf8;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>Akshay Sirsat</h1>
-    <p>Cloud Engineer ☁️ | AWS 3x Certified | SRE, DevOps & Automation 🚀</p>
-  </header>
+<header>
+  <h1>Akshay Sirsat</h1>
+  <p class="typing">Cloud Engineer / DevOps / Automation</p>
+</header>
 
-  <div class="container">
-
-    <h2>About Me</h2>
+<section>
+  <h2>About Me</h2>
+  <div class="about">
+    <strong>Click to toggle bio</strong>
     <p>
-      I'm a Cloud Engineer with 5+ years of experience designing and implementing scalable AWS infrastructure. My focus is on automation, security, and making complex cloud systems simple and reliable. Whether it's building self-healing environments with Terraform and Kubernetes, optimizing CI/CD pipelines, or strengthening observability, I approach every challenge with a problem-solving mindset and ownership.
-      <br><br>
-      I enjoy exploring modern architectures, learning new tools, and finding practical ways to improve performance and resilience. Outside of work, you'll usually find me reading about emerging cloud trends, experimenting with side projects, or sharing ideas over a cup of chai.
+      I'm a Cloud Engineer with 5+ years of experience designing scalable, automated AWS infrastructures. I focus on creating reliable, secure, and efficient systems using Terraform, Kubernetes, and modern DevOps practices. I love solving complex problems and continuously learning new tools to deliver high-impact solutions.
     </p>
+  </div>
 
-    <h2>What I'm Doing</h2>
-    <div class="what-doing">
-      <div class="activity">
-        <h3>☁️ Cloud & Automation</h3>
-        <p>Developing infrastructure with Terraform, AWS, and Kubernetes. Automating deployment pipelines and scaling solutions.</p>
-      </div>
-      <div class="activity">
-        <h3>🔒 Security & Monitoring</h3>
-        <p>Implementing access controls, compliance checks, threat detection, and observability dashboards.</p>
-      </div>
-      <div class="activity">
-        <h3>⚙️ Site Reliability</h3>
-        <p>Designing high-availability architectures, incident response strategies, and performance optimizations.</p>
-      </div>
-      <div class="activity">
-        <h3>🎓 Mentoring & Learning</h3>
-        <p>Creating learning resources and guiding peers in cloud engineering best practices.</p>
-      </div>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div>AWS</div>
+    <div>Terraform</div>
+    <div>Python</div>
+    <div>Kubernetes</div>
+    <div>Docker</div>
+    <div>CI/CD</div>
+    <div>Linux</div>
+    <div>Monitoring</div>
+  </div>
+
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project">
+      <h3><a href="#" target="_blank">Auto Scaling Infrastructure</a></h3>
+      <p>Terraform scripts for auto-scaling EC2 clusters with ALB and monitoring.</p>
     </div>
-
-    <h2>Certifications</h2>
-    <div class="certifications">
-      <div>AWS Solutions Architect – Associate</div>
-      <div>AWS AI Practitioner</div>
-      <div>Terraform Associate (in progress)</div>
-      <div>Kubernetes CKA (planned)</div>
+    <div class="project">
+      <h3><a href="#" target="_blank">EKS Monitoring Stack</a></h3>
+      <p>Prometheus & Grafana stack for Kubernetes observability.</p>
     </div>
-
-    <h2>Contact</h2>
-    <div class="contact">
-      <div>📧 <a href="mailto:sirsatakshay20@gmail.com">sirsatakshay20@gmail.com</a></div>
-      <div>📍 Nagpur, Maharashtra, India</div>
-      <div>💼 <a href="https://www.linkedin.com/in/akshay-s-5a1151209" target="_blank">LinkedIn</a></div>
-      <div>💻 <a href="https://github.com/akshaypsirsat" target="_blank">GitHub</a></div>
+    <div class="project">
+      <h3><a href="#" target="_blank">AWS Lambda NLP</a></h3>
+      <p>Serverless text analysis using AWS Comprehend and Rekognition APIs.</p>
     </div>
   </div>
 
-  <footer>
-    © 2025 Akshay Sirsat
-  </footer>
+  <h2>Certifications</h2>
+  <div class="certifications">
+    <div>
+      <img src="https://images.credly.com/size/110x110/images/placeholder.png" width="50"><br>
+      <a href="#">AWS Solutions Architect – Associate</a>
+    </div>
+    <div>
+      <img src="https://images.credly.com/size/110x110/images/placeholder.png" width="50"><br>
+      <a href="#">AWS AI Practitioner</a>
+    </div>
+    <div>
+      <img src="https://images.credly.com/size/110x110/images/placeholder.png" width="50"><br>
+      <a href="#">Terraform Associate</a>
+    </div>
+  </div>
+
+  <h2>Contact</h2>
+  <div class="contact">
+    <div>📧 <a href="mailto:akshanc2@gmail.com">akshanc2@gmail.com</a></div>
+    <div>📍 Nagpur, India</div>
+    <div>💼 <a href="#" target="_blank">LinkedIn</a></div>
+    <div>💻 <a href="#" target="_blank">GitHub</a></div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Akshay Sirsat
+</footer>
+
+<script>
+  // Typing animation
+  const el = document.querySelector(".typing");
+  const text = el.textContent;
+  el.textContent = "";
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      el.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, 100);
+    }
+  }
+  type();
+
+  // About toggle
+  const about = document.querySelector(".about");
+  const para = about.querySelector("p");
+  about.addEventListener("click", () => {
+    para.style.display = para.style.display === "block" ? "none" : "block";
+  });
+</script>
 
 </body>
 </html>
