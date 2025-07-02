@@ -2,62 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Akshay Sirsat - Cloud Engineer Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akshay Sirsat - Cloud Engineer</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #0f172a;
-      color: #f1f5f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
       line-height: 1.6;
     }
     header {
-      background: #1e293b;
-      padding: 30px 20px;
+      background-color: #1e293b;
+      color: #f1f5f9;
+      padding: 60px 20px;
       text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 2.2em;
-      color: #38bdf8;
+      font-size: 2.5em;
     }
     header p {
-      color: #94a3b8;
-      margin-top: 8px;
-    }
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
-    .project {
-      background: #1e293b;
-      padding: 15px 20px;
-      margin-bottom: 20px;
-      border-left: 4px solid #38bdf8;
-      border-radius: 5px;
-    }
-    .project h3 {
-      margin: 0 0 5px;
-      color: #facc15;
-    }
-    .project p {
-      margin: 0;
+      font-size: 1.2em;
       color: #cbd5e1;
     }
-    a {
-      color: #38bdf8;
-      text-decoration: none;
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
     }
-    a:hover {
-      text-decoration: underline;
+    h2 {
+      color: #1e40af;
+      margin-bottom: 20px;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .skill {
+      background: #e2e8f0;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: 500;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 15px;
+      transition: transform 0.2s;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .project h3 {
+      margin-top: 0;
+      color: #0f172a;
+    }
+    .project p {
+      color: #334155;
+    }
+    .contact {
+      text-align: center;
+    }
+    .contact a {
+      color: #1d4ed8;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 500;
     }
     footer {
       text-align: center;
       padding: 20px;
       color: #64748b;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -66,33 +91,54 @@
     <h1>Akshay Sirsat</h1>
     <p>Cloud Engineer ☁️ | AWS 3x Certified | SRE, DevOps & Automation 🚀</p>
   </header>
+
   <section>
     <h2>About Me</h2>
-    <p>I am an experienced Cloud Engineer with expertise in AWS, Infrastructure as Code, and automation. Passionate about building scalable systems and continuously learning new technologies.</p>
+    <p>I am a Cloud Engineer with 5+ years of experience designing scalable AWS infrastructure, automating deployments with Terraform, and ensuring high availability across environments.</p>
+  </section>
 
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">AWS</div>
+      <div class="skill">Terraform</div>
+      <div class="skill">Python</div>
+      <div class="skill">Docker</div>
+      <div class="skill">Kubernetes</div>
+      <div class="skill">CI/CD</div>
+      <div class="skill">Linux</div>
+      <div class="skill">Monitoring</div>
+    </div>
+  </section>
+
+  <section>
     <h2>Projects</h2>
-    <div class="project">
-      <h3><a href="https://github.com/akshaysirsat/terraform-aws-autoscaling" target="_blank">Auto Scaling Infrastructure</a></h3>
-      <p>Terraform scripts to deploy auto-scaling EC2 clusters with ALB and CloudWatch metrics.</p>
+    <div class="projects">
+      <div class="project">
+        <h3><a href="https://github.com/akshaysirsat/terraform-aws-autoscaling" target="_blank">Auto Scaling Infra</a></h3>
+        <p>Terraform scripts deploying EC2 clusters with Auto Scaling and ALB.</p>
+      </div>
+      <div class="project">
+        <h3><a href="https://github.com/akshaysirsat/eks-monitoring" target="_blank">EKS Monitoring Stack</a></h3>
+        <p>Prometheus and Grafana setup to monitor Kubernetes workloads.</p>
+      </div>
+      <div class="project">
+        <h3><a href="https://github.com/akshaysirsat/aws-lambda-nlp" target="_blank">AWS Lambda NLP</a></h3>
+        <p>Serverless Lambda functions integrating Comprehend and Rekognition.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="project">
-      <h3><a href="https://github.com/akshaysirsat/eks-monitoring" target="_blank">EKS Monitoring Stack</a></h3>
-      <p>Prometheus and Grafana monitoring setup for Kubernetes workloads.</p>
-    </div>
-
-    <div class="project">
-      <h3><a href="https://github.com/akshaysirsat/aws-lambda-nlp" target="_blank">AWS Lambda NLP</a></h3>
-      <p>Serverless functions integrating AWS Comprehend and Rekognition APIs for text and image analysis.</p>
-    </div>
-
+  <section class="contact">
     <h2>Contact</h2>
     <p>
-      📧 sirsatakshay20@gmail.com<br />
-      🌐 <a href="https://www.linkedin.com/in/akshay-s-5a1151209" target="_blank">LinkedIn</a> |
+      📧 <a href="mailto:sirsatakshay20@gmail.com">sirsatakshay20@gmail.com</a><br/>
+      🌐 <a href="https://www.linkedin.com/in/akshay-s-5a1151209" target="_blank">LinkedIn</a>
+      |
       💻 <a href="https://github.com/akshaypsirsat" target="_blank">GitHub</a>
     </p>
   </section>
+
   <footer>
     © 2025 Akshay Sirsat
   </footer>
