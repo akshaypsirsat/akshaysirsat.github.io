@@ -1,192 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Akshay Sirsat - Cloud Engineer Portfolio</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0f172a;
-    color: #f1f5f9;
-  }
-  header {
-    background-color: #1e293b;
-    color: #f1f5f9;
-    text-align: center;
-    padding: 80px 20px;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.5em;
-  }
-  header p {
-    margin-top: 10px;
-    font-size: 1.2em;
-    color: #38bdf8;
-  }
-  .typing {
-    border-right: .1em solid #38bdf8;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
-  }
-  h2 {
-    color: #38bdf8;
-  }
-  .about {
-    background: #1e293b;
-    padding: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .about p {
-    display: none;
-    margin-top: 10px;
-  }
-  .skills, .contact, .certifications {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  .skills div, .contact div, .certifications div {
-    background: #1e293b;
-    padding: 10px 15px;
-    border: 1px solid #334155;
-    border-radius: 5px;
-    text-align: center;
-    flex: 1 1 120px;
-  }
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-  }
-  .project {
-    border: 1px solid #334155;
-    border-radius: 6px;
-    padding: 15px;
-    background: #1e293b;
-    transition: transform 0.2s;
-  }
-  .project:hover {
-    transform: translateY(-5px);
-  }
-  footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-    color: #94a3b8;
-  }
-  a {
-    color: #38bdf8;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-</style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akshay Sirsat | Cloud Engineer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.1" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  </head>
+  <body class="bg-gray-900 text-gray-100 font-sans">
+    <!-- Hero -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-4">
+      <h1 class="text-4xl sm:text-6xl font-bold mb-4">Akshay Sirsat</h1>
+      <p class="text-xl sm:text-2xl text-gray-400">Cloud Engineer / DevOps / Automation Enthusiast</p>
+      <a href="#projects" class="mt-8 inline-block px-6 py-3 border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white transition">View Projects</a>
+    </section>
 
-<header>
-  <h1>Akshay Sirsat</h1>
-  <p class="typing">Cloud Engineer / DevOps / Automation</p>
-</header>
+    <!-- About -->
+    <section class="max-w-4xl mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold text-blue-400 mb-6">About Me</h2>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        I'm a Cloud Engineer with 5+ years of experience designing secure, scalable AWS infrastructures.
+        I specialize in automation, IaC (Terraform), and Kubernetes-based deployments. Obsessed with system
+        resilience, observability, and minimizing toil. I love chai, terminal art, and breaking things (then fixing them better).
+      </p>
+    </section>
 
-<section>
-  <h2>About Me</h2>
-  <div class="about">
-    <strong>Click to toggle bio</strong>
-    <p>
-      I'm a Cloud Engineer with 5+ years of experience designing scalable, automated AWS infrastructures. I focus on creating reliable, secure, and efficient systems using Terraform, Kubernetes, and modern DevOps practices. I love solving complex problems and continuously learning new tools to deliver high-impact solutions.
-    </p>
-  </div>
+    <!-- Projects -->
+    <section id="projects" class="bg-gray-800 py-16 px-4">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold text-blue-400 mb-10 text-center">Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div class="bg-gray-700 rounded-lg p-6 shadow hover:shadow-xl transition">
+            <h3 class="text-xl font-semibold text-white mb-2">Auto Scaling Infrastructure</h3>
+            <p class="text-gray-300">Terraform scripts to create self-scaling AWS EC2 clusters with ALB and CloudWatch alarms.</p>
+          </div>
+          <div class="bg-gray-700 rounded-lg p-6 shadow hover:shadow-xl transition">
+            <h3 class="text-xl font-semibold text-white mb-2">EKS Monitoring Stack</h3>
+            <p class="text-gray-300">Prometheus + Grafana setup with custom dashboards and alerting for Kubernetes workloads.</p>
+          </div>
+          <div class="bg-gray-700 rounded-lg p-6 shadow hover:shadow-xl transition">
+            <h3 class="text-xl font-semibold text-white mb-2">AWS Lambda NLP</h3>
+            <p class="text-gray-300">Serverless text + image processing using Comprehend & Rekognition APIs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <h2>Skills</h2>
-  <div class="skills">
-    <div>AWS</div>
-    <div>Terraform</div>
-    <div>Python</div>
-    <div>Kubernetes</div>
-    <div>Docker</div>
-    <div>CI/CD</div>
-    <div>Linux</div>
-    <div>Monitoring</div>
-  </div>
+    <!-- Contact -->
+    <section class="max-w-4xl mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold text-blue-400 mb-6">Contact</h2>
+      <div class="space-y-2">
+        <p>📧 <a href="mailto:akshanc2@gmail.com" class="text-blue-400 hover:underline">akshanc2@gmail.com</a></p>
+        <p>🌐 <a href="https://www.linkedin.com/in/akshay-s-5a1151209" target="_blank" class="text-blue-400 hover:underline">LinkedIn</a></p>
+        <p>💻 <a href="https://github.com/akshaysirsat" target="_blank" class="text-blue-400 hover:underline">GitHub</a></p>
+      </div>
+    </section>
 
-  <h2>Projects</h2>
-  <div class="projects">
-    <div class="project">
-      <h3><a href="#" target="_blank">Auto Scaling Infrastructure</a></h3>
-      <p>Terraform scripts for auto-scaling EC2 clusters with ALB and monitoring.</p>
-    </div>
-    <div class="project">
-      <h3><a href="#" target="_blank">EKS Monitoring Stack</a></h3>
-      <p>Prometheus & Grafana stack for Kubernetes observability.</p>
-    </div>
-    <div class="project">
-      <h3><a href="#" target="_blank">AWS Lambda NLP</a></h3>
-      <p>Serverless text analysis using AWS Comprehend and Rekognition APIs.</p>
-    </div>
-  </div>
+    <footer class="text-center py-6 text-gray-500 border-t border-gray-700">
+      © 2025 Akshay Sirsat — Built with Tailwind + ❤️
+    </footer>
 
-  <h2>Certifications</h2>
-  <div class="certifications">
-    <div>
-      <img src="https://www.credly.com/earner/earned/badge/e5ab3d58-3c7f-4fbe-8973-e6b818740ec8" width="50"><br>
-      <a href="#">AWS Solutions Architect – Associate</a>
-    </div>
-    <div>
-      <img src="https://images.credly.com/size/110x110/images/placeholder.png" width="50"><br>
-      <a href="#">AWS AI Practitioner</a>
-    </div>
-    <div>
-      <img src="https://images.credly.com/size/110x110/images/placeholder.png" width="50"><br>
-      <a href="#">Terraform Associate</a>
-    </div>
-  </div>
-
-  <h2>Contact</h2>
-  <div class="contact">
-    <div>📧 <a href="mailto:akshanc2@gmail.com">akshanc2@gmail.com</a></div>
-    <div>📍 Nagpur, India</div>
-    <div>💼 <a href="#" target="_blank">LinkedIn</a></div>
-    <div>💻 <a href="#" target="_blank">GitHub</a></div>
-  </div>
-</section>
-
-<footer>
-  © 2025 Akshay Sirsat
-</footer>
-
-<script>
-  // Typing animation
-  const el = document.querySelector(".typing");
-  const text = el.textContent;
-  el.textContent = "";
-  let i = 0;
-  function type() {
-    if (i < text.length) {
-      el.textContent += text.charAt(i);
-      i++;
-      setTimeout(type, 100);
-    }
-  }
-  type();
-
-  // About toggle
-  const about = document.querySelector(".about");
-  const para = about.querySelector("p");
-  about.addEventListener("click", () => {
-    para.style.display = para.style.display === "block" ? "none" : "block";
-  });
-</script>
-
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.from("h1", { duration: 1.2, y: -40, opacity: 0, ease: "power2.out" });
+        gsap.from("p", { duration: 1, delay: 0.2, opacity: 0, y: 20 });
+      });
+    </script>
+  </body>
 </html>
+
